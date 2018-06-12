@@ -1,5 +1,5 @@
 import Vapor
-//import Leaf
+import Leaf
 
 /// Controls basic CRUD operations on `Todo`s.
 final class TodoController {

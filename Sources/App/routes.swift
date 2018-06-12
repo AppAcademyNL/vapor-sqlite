@@ -1,5 +1,5 @@
 import Vapor
-//import Leaf
+import Leaf
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
@@ -8,11 +8,11 @@ public func routes(_ router: Router) throws {
         return "Hello, world!"
     }
 
-//	router.get("list") { req -> Future<View> in
-//        let context: [String: [Todo]] = ["todos": [Todo(title: "dit moet je nog doen"),
-//            Todo(title: "en dit!")]]
-//        return try req.view().render("list", context)
-//    }
+	router.get("list") { req -> Future<View> in
+        let context: [String: [Todo]] = ["todos": [Todo(title: "dit moet je nog doen"),
+            Todo(title: "en dit!")]]
+        return try req.view().render("list", context)
+    }
     
     // Example of configuring a controller
     let todoController = TodoController()

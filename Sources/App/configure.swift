@@ -13,8 +13,8 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     services.register(router, as: Router.self)
 
     // Configure the rest of your application here
-    //    try services.register(LeafProvider())
-    //    config.prefer(LeafRenderer.self, for: ViewRenderer.self)
+        try services.register(LeafProvider())
+        config.prefer(LeafRenderer.self, for: ViewRenderer.self)
 
     /// Register middleware
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
