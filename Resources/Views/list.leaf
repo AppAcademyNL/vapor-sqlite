@@ -1,0 +1,10 @@
+<html>
+<body>
+<h1>Todos:</h1>
+<ul>
+	#for(todo in todos) {
+		<h2><li>#(todo.title)</li></h2>
+	}
+</ul>
+</body>
+</html>
