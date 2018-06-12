@@ -1,5 +1,5 @@
 import Vapor
-import Leaf
+//import Leaf
 
 /// Controls basic CRUD operations on `Todo`s.
 final class TodoController {
@@ -21,14 +21,16 @@ final class TodoController {
             return todo.delete(on: req)
         }.transform(to: .ok)
     }
-    
-    func web(_ req: Request) throws -> Future<View> {
-        struct ViewTodos: Codable {
-            var todos: [Todo]
-        }
-        return Todo.query(on: req).all().flatMap(to: View.self) { todos in
-            let context = ViewTodos(todos: todos)
-            return try req.view().render("list", context)
-        }
-    }
+
+
+//    func web(_ req: Request) throws -> Future<View> {
+//        struct ViewTodos: Codable {
+//          var todos: [Todo]
+//        }
+//        return Todo.query(on: req).all().flatMap(to: View.self) { todos in
+//            let context = ViewTodos(todos: todos)
+//            return try req.view().render("list", context)
+//        }
+//    }
+
 }

@@ -1,0 +1,7 @@
+# CURL commands
+
+curl -X POST http://localhost:8080/todos -d "title=This is a new todo item"
+curl http://localhost:8080/todos
+curl -X DELETE http://localhost:8080/todos/2
+curl -X PUT http://localhost:8080/todos/2 -d "title=The todo is now new and improved"
+
