@@ -21,7 +21,20 @@ final class TodoController {
             return todo.delete(on: req)
         }.transform(to: .ok)
     }
-
+    
+//    func update(_ req: Request) throws -> Future<Todo> {
+//        let newTodo = try req.content.syncDecode(Todo.self)
+//        guard let id = newTodo.id else {
+//            throw Abort(.notFound)
+//        }
+//        return try Todo.find(id, on: req).flatMap(to: Todo.self) { todo in
+//            guard let todo = todo else {
+//                throw Abort(.notFound)
+//            }
+//            todo.title = newTodo.title
+//            return todo.save(on: req)
+//        }
+//    }
 
 //    func web(_ req: Request) throws -> Future<View> {
 //        struct ViewTodos: Codable {
@@ -32,5 +45,4 @@ final class TodoController {
 //            return try req.view().render("list", context)
 //        }
 //    }
-
 }
